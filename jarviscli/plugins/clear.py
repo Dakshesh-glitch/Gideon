@@ -1,5 +1,5 @@
 """
-Jarvis plugin for clearing the terminal
+Gideon plugin for clearing the terminal
 """
 from plugin import plugin, require, WINDOWS, UNIX
 import os

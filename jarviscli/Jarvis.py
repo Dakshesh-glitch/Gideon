@@ -35,9 +35,9 @@ class Jarvis(CmdInterpreter, object):
     # allows Jarvis say "Hi", only at the first interaction.
     first_reaction_text = ""
     first_reaction_text += Fore.CYAN + \
-        'Jarvis\' sound is by default disabled.' + Fore.RESET
+        'Gideon\'s sound is by default disabled.' + Fore.RESET
     first_reaction_text += "\n"
-    first_reaction_text += Fore.CYAN + 'In order to let Jarvis talk out loud type: '
+    first_reaction_text += Fore.CYAN + 'In order to let Gideon talk out loud type: '
     first_reaction_text += Fore.RESET + Fore.MAGENTA + 'enable sound' + Fore.RESET
     first_reaction_text += "\n"
     first_reaction_text += Fore.CYAN + \

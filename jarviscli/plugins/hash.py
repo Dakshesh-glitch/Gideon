@@ -10,7 +10,7 @@ def hash_data(jarvis, s: str) -> None:
     Hashes a given string or file using the specified hash function.
 
     Parameters:
-    jarvis (obj): Jarvis assistant object
+    jarvis (obj): Gideon assistant object
     s (str): Not used in this function
 
     Returns:

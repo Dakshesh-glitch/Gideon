@@ -7,7 +7,7 @@ import subprocess
 @plugin("wifi")
 class WifiPasswordGetterLINUX:
     """
-    A Jarvis plugin for Linux, that will find and display all the profiles of the
+    A Gideon plugin for Linux, that will find and display all the profiles of the
     wifis that you have connected to and then display the password if selected.
 
     """
@@ -113,7 +113,7 @@ class WifiPasswordGetterLINUX:
 @plugin("wifi")
 class WifiPasswordGetterWINDOWS:
     """
-    A Jarvis plugin for Windows, that will find and display all the profiles of the
+    A Gideon plugin for Windows, that will find and display all the profiles of the
     wifis that you have connected to and then display the password, if selected or
     display instantly the password of the requested wifi, e.g. wifi or wifi wifi_name.
     """

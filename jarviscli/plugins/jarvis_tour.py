@@ -127,7 +127,7 @@ plugin_data = {
                 "hangman": "This plugin plays a game of Hangman where the player guesses letters to reveal a hidden word.",
                 "magic_8_ball": "Ask the Magic 8 Ball a question.",
                 "memory": "Train your short-term memory with increasing difficulty.",
-                "rockpaperscissors": "Play Rock-Paper-Scissors against Jarvis with score tracking and up to 100 rounds.",
+                "rockpaperscissors": "Play Rock-Paper-Scissors against Gideon with score tracking and up to 100 rounds.",
                 "roulette": "Play a simple roulette game where you place bets and spin the wheel to win or lose virtual cash.",
                 "spinthewheel": "Spin a virtual wheel for random selection.",
                 "tic_tac_toe": "Play Tic-Tac-Toe against the computer.",
@@ -268,7 +268,7 @@ plugin_data = {
                        guess_number_game
                     
                     2. Game Introduction
-                       Jarvis will introduce the rules and start the game.
+                       Gideon will introduce the rules and start the game.
                     
                     3. Choose Difficulty Mode
                        Select between Hard (6 lives) or Normal (8 lives):
@@ -279,7 +279,7 @@ plugin_data = {
                        give me a number between(1-100): 50
                     
                     5. Feedback
-                       Jarvis will inform you if the number is bigger or smaller:
+                       Gideon will inform you if the number is bigger or smaller:
                        The number that I am thinking is smaller than the one you guessed
                     
                     6. Continue Guessing
@@ -287,7 +287,7 @@ plugin_data = {
                        make the next guess (lives: 5)
                     
                     7. Game Over
-                       If you guess the correct number, Jarvis will congratulate you. If you run out of lives, the game will end.
+                       If you guess the correct number, Gideon will congratulate you. If you run out of lives, the game will end.
                     """,
                 "hangman": """
                     Hangman Plugin Tutorial
@@ -400,8 +400,8 @@ plugin_data = {
                        Example input:
                        Enter your move: r
                     
-                    4. Jarvis Makes a Move
-                       Jarvis will also make a move, and the winner of the round will be announced.
+                    4. Gideon Makes a Move
+                       Gideon will also make a move, and the winner of the round will be announced.
                     
                     5. Game End
                        After all rounds are played or you choose to exit, the game ends, displaying the final score.
@@ -490,7 +490,7 @@ plugin_data = {
                     
                     2. Game Modes
                        After starting the game, choose one of the following modes:
-                       1. Play against Jarvis.
+                       1. Play against Gideon.
                        2. Play against a friend (two players).
                     
                     3. Board Layout
@@ -504,7 +504,7 @@ plugin_data = {
                     4. How to Play
                        - Player X goes first, followed by Player O.
                        - Input a number (1-9) corresponding to the board position to place your piece.
-                       - For single-player mode, Jarvis will make its move after the user.
+                       - For single-player mode, Gideon will make its move after the user.
                     
                     5. Winning the Game
                        - The game ends when a player gets three pieces in a row (horizontally, vertically, or diagonally).
@@ -513,7 +513,7 @@ plugin_data = {
                     6. Example Gameplay
                        - X turn. Choose a position: 5
                        - O turn. Choose a position: 1
-                       - Jarvis will make its move automatically in single-player mode.
+                       - Gideon will make its move automatically in single-player mode.
                     """,
                 "wordgame": """
                     1. Start the Game
@@ -531,9 +531,9 @@ plugin_data = {
                        Give a word: (e.g., apple)
                     
                     4. Continue Playing
-                       Jarvis will give a word starting with the last letter of your word:
-                       Jarvis' answer is: eagle
-                       You must then provide a word starting with the last letter of Jarvis' word.
+                       Gideon will give a word starting with the last letter of your word:
+                       Gideon's answer is: eagle
+                       You must then provide a word starting with the last letter of Gideon's word.
                     
                     5. Win or Lose
                        If you win all rounds or lose by mistake or timeout, the game ends.
@@ -613,7 +613,7 @@ plugin_data = {
                     Enter an integer (e.g., 15)
     
                     4. Follow the Program
-                    Jarvis will generate a personalized workout routine and guide you through sets with rest intervals.
+                    Gideon will generate a personalized workout routine and guide you through sets with rest intervals.
                     
                     5. Completion
                     After finishing all sets, you will see your total reps and a motivational message.
@@ -1025,7 +1025,7 @@ plugin_data = {
         "": {
             "plugins": ["voice", "voice_control"],
             "descriptions": {
-                "voice": "Enable or disable Jarvis's voice and control speech speed.",
+                "voice": "Enable or disable Gideon's voice and control speech speed.",
                 "voice_control": "Activates voice mode for commands and listens for 'stop' to deactivate.",
             },
             "tutorials": {
@@ -1033,17 +1033,17 @@ plugin_data = {
                     1. Enable Sound
                     Run the command:
                     enable sound
-                    Jarvis will use a voice engine. Consent for data collection by typing "gtts".
+                    Gideon will use a voice engine. Consent for data collection by typing "gtts".
     
                     2. Disable Sound
                     Run the command:
                     disable sound
-                    Jarvis will stop using voice output.
+                    Gideon will stop using voice output.
     
                     3. Use Google Text-to-Speech (GTTS)
                     Run the command:
                     gtts
-                    Jarvis will use Google’s speech engine for voice output.
+                    Gideon will use Google’s speech engine for voice output.
     
                     4. Disable GTTS
                     Run the command:
@@ -1054,12 +1054,12 @@ plugin_data = {
                     Run the commands:
                     talk faster
                     talk slower
-                    Adjust the speech speed of Jarvis (Linux and Windows only).
+                    Adjust the speech speed of Gideon (Linux and Windows only).
     
-                    6. Make Jarvis Speak
+                    6. Make Gideon Speak
                     Run the command:
                     say <message>
-                    Jarvis will say the message out loud.
+                    Gideon will say the message out loud.
                     """,
                 "voice_control": """
                     1. Start the Plugin
@@ -1070,7 +1070,7 @@ plugin_data = {
                     Say "listen" to activate voice mode. The system will now listen for commands.
     
                     3. Speak Commands
-                    After activation, speak any valid command to Jarvis, which will execute it.
+                    After activation, speak any valid command to Gideon, which will execute it.
     
                     4. Stop Listening
                     Say "stop" to end the listening mode.
@@ -1257,7 +1257,7 @@ plugin_data = {
             "plugins": ["bulkresize", "create_plugin"],
             "descriptions": {
                 "bulkresize": "Resize and optionally renames all images in a directory, tailored for deep learning data preparation.",
-                "create_plugin": "Create a plugin for Jarvis.",
+                "create_plugin": "Create a plugin for Gideon.",
             },
             "tutorials": {
                 "bulkresize": """
@@ -1323,7 +1323,7 @@ plugin_data = {
     
                     7. Next Steps
                     - Modify the generated plugin file to add your desired functionality
-                    - Restart Jarvis to apply changes
+                    - Restart Gideon to apply changes
     
                     Note: Use lowercase letters, numbers, and underscores for plugin names.
                     """,
@@ -2292,20 +2292,20 @@ plugin_data = {
 @plugin("jarvis tour")
 def start_tour(jarvis, s):
     """
-    Start the Jarvis tour, guiding the user through a curated subset of
+    Start the Gideon tour, guiding the user through a curated subset of
     plugin categories, subcategories, and demonstrating how to use selected plugins.
 
-    The tour aims to familiarize users with Jarvis' capabilities and demonstrate
+    The tour aims to familiarize users with Gideon's capabilities and demonstrate
     how to effectively use the plugins. It serves as an interactive introduction
-    to Jarvis, making it an ideal starting point for new users.
+    to Gideon, making it an ideal starting point for new users.
 
     Note:
     -----
-    We have selected a subset of Jarvis plugins for this tour to provide
+    We have selected a subset of Gideon plugins for this tour to provide
     a structured experience. However, contributions to the tour are encouraged—
     adding new plugins is more than welcomed!
     """
-    jarvis.say("Welcome to the Jarvis Tour!")
+    jarvis.say("Welcome to the Gideon Tour!")
     show_categories(jarvis)
 
 
@@ -2323,7 +2323,7 @@ def show_categories(jarvis):
             "Please select a category by number (or 'q' to quit): "
         )
         if category_input.lower() == "q":
-            jarvis.say("Thank you for using the Jarvis Tour!")
+            jarvis.say("Thank you for using the Gideon Tour!")
             return
 
         if category_input.isdigit() and 1 <= int(category_input) <= len(categories):

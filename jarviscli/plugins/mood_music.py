@@ -1,8 +1,8 @@
 """
 
-A Jarvis plugin for listening music according
+A Gideon plugin for listening music according
 to your mood through Spotify's Web Player!
-Jarvis asks for your mood and based on your choice it
+Gideon asks for your mood and based on your choice it
 opens a specific playlist of Spotify that fits
 your mood.
 

@@ -11,7 +11,7 @@ from plugin import alias, plugin
 @plugin('calculate')
 def calculate(jarvis, s):
     """
-    Jarvis will get your calculations done!
+    Gideon will get your calculations done!
     -- Example:
         calculate 3 + 5
     """
@@ -95,7 +95,7 @@ def equations(jarvis, term):
 @plugin('factor')
 def factor(jarvis, s):
     """
-    Jarvis will factories
+    Gideon will factories
     -- Example:
         factor x**2-y**2
     """

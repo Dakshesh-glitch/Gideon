@@ -91,7 +91,7 @@ class JarvisAPI(object):
         self.say(JarvisAPI._CONNECTION_ERROR_MSG)
 
     def exit(self):
-        """Immediately exit Jarvis"""
+        """Immediately exit Gideon"""
         self._jarvis.close()
 
     def notification(self, msg, time_seconds=0):
@@ -103,7 +103,7 @@ class JarvisAPI(object):
         if isinstance(msg, tuple):
             headline, message = msg
         elif isinstance(msg, str):
-            headline = "Jarvis"
+            headline = "Gideon"
             message = msg
         else:
             raise ValueError("msg not a string or tuple")
@@ -422,7 +422,7 @@ class CmdInterpreter(Cmd):
         return self._api
 
     def close(self):
-        """Closing Jarvis."""
+        """Closing Gideon."""
 
         '''Stop the spinner if it is already running'''
         if self._api.is_spinner_running():
@@ -461,7 +461,7 @@ class CmdInterpreter(Cmd):
             Cmd.do_help(self, arg)
         else:
             self.say("")
-            header_string = "These are valid commands for Jarvis"
+            header_string = "These are valid commands for Gideon"
             format_string = "Format: command ([aliases for command])"
             self.say(header_string)
             self.say(format_string, Fore.CYAN)

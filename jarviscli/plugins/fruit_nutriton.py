@@ -9,7 +9,7 @@ import requests
 def nutrition_fruit(jarvis,s):
     """
     Args:
-        jarvis (obj): Jarvis assistant 
+        jarvis (obj): Gideon assistant 
         s (str): the name of the furit that the user inputs
     Used to retrive infomration about nutrition of fruits and can also be used to compae between fruits 
     """
@@ -51,7 +51,7 @@ def compare_fruit(jarvis, original_fruit):
     """_summary_
 
     Args:
-        jarvis (obj): Jarvis assistant 
+        jarvis (obj): Gideon assistant 
         original_fruit (): _description_
     """
 

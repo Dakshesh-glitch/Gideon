@@ -7,7 +7,7 @@ from plugin import plugin
 @plugin("tasks")
 class TaskManager():
     """
-    Jarvis plugin For Managing User Tasks
+    Gideon plugin For Managing User Tasks
 
     """
 

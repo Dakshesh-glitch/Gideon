@@ -7,7 +7,7 @@ from plugin import plugin, complete, require
 @plugin('wiki')
 class Wiki():
     """
-    Jarvis has now wiki feature
+    Gideon has now wiki feature
     enter wiki search for searching related topics
     enter wiki summary for getting summary of the topic
     wiki content for full page article of topic

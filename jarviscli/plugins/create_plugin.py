@@ -18,7 +18,7 @@ CUSTOM_PLUGINS_PATH = os.path.join(PLUGINS_PATH, '..', '..', 'custom/')
 @plugin("create plugin")
 def create_plugin_MAC(jarvis, s):
 
-    # Jarvis asks for the name of the plugin to create if not provided.
+    # Gideon asks for the name of the plugin to create if not provided.
     if s == "":
         jarvis.say("Please insert the name of your plugin: ", Fore.RED)
         name = jarvis.input()
@@ -67,7 +67,7 @@ def create_plugin_MAC(jarvis, s):
 @plugin("create plugin")
 def create_plugin_LINUX(jarvis, s):
 
-    # Jarvis asks for the name of the plugin to create if not provided.
+    # Gideon asks for the name of the plugin to create if not provided.
     if s == "":
         jarvis.say("Please insert the name of your plugin: ", Fore.RED)
         name = jarvis.input()
@@ -146,7 +146,7 @@ from plugin import plugin
 
 # This is the standard form of a plugin for jarvis
 
-# Anytime you make a change REMEMBER TO RESTART Jarvis
+# Anytime you make a change REMEMBER TO RESTART Gideon
 
 # You can run it through jarvis by the name
 # in the @plugin tag.

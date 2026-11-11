@@ -32,7 +32,7 @@ def word_game(jarvis,s):
         while current_rounds<=rounds:
             jarvis.say("Round "+str(current_rounds),color=Fore.YELLOW)
             jarvis_answer=generateWord(word[len(word)-1])
-            jarvis.say("Jarvis' answer is: "+jarvis_answer,color=Fore.YELLOW)
+            jarvis.say("Gideon's answer is: "+jarvis_answer,color=Fore.YELLOW)
 
             start_time=time.time()
             word=jarvis.input("Give a word starting with the letter: \""+str(jarvis_answer[len(jarvis_answer)-1])+"\" , You have "+str(max_seconds_to_answer)+" seconds to answer! \n",color=Fore.GREEN)
@@ -45,7 +45,7 @@ def word_game(jarvis,s):
                 break
 
             if word[0]!=jarvis_answer[len(jarvis_answer)-1]:
-                jarvis.say("Your word does not start with the last letter of jarvis' word! You lost. ",color=Fore.RED)
+                jarvis.say("Your word does not start with the last letter of Gideon's word! You lost. ",color=Fore.RED)
                 break
                 
             if (not d.check(word)) or len(word)<2:
@@ -53,7 +53,7 @@ def word_game(jarvis,s):
                 break 
 
         if current_rounds>rounds:
-            jarvis.say("Congratulations! You won all "+str(rounds)+" rounds against jarvis!",color=Fore.YELLOW)
+            jarvis.say("Congratulations! You won all "+str(rounds)+" rounds against Gideon!",color=Fore.YELLOW)
 
         continue_playing=jarvis.input("If you want to continue playing press Y/y, otherwise press N/n \n")
         

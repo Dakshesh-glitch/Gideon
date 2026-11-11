@@ -4,7 +4,7 @@ from colorama import Fore
 from plugin import alias, plugin, require
 # This is the standard form of a plugin for jarvis
 
-# Anytime you make a change REMEMBER TO RESTART Jarvis
+# Anytime you make a change REMEMBER TO RESTART Gideon
 
 # You can run it through jarvis by the name
 # in the @plugin tag.

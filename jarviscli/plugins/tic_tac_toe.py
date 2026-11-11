@@ -214,7 +214,7 @@ def game(jarvis, s):
     print('The tic tac toe game for two players.')
     print('Positions on the board are placed as follow:')
     print('7 | 8 | 9\n-----------\n4 | 5 | 6\n-----------\n1 | 2 | 3')
-    print('If you want to play against Jarvis press 1.')
+    print('If you want to play against Gideon press 1.')
     print('If you want to play with a friend next to you press 2.')
 
     game_type = input("Enter your game type, 1 or 2:\n")

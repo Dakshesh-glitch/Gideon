@@ -10,7 +10,7 @@ def fruit(jarvis, s: str) -> None:
     Retrieves information about a specific fruit from the Fruityvice API and outputs it to the user.
 
     Parameters:
-    jarvis (obj): Jarvis assistant object
+    jarvis (obj): Gideon assistant object
     s (str): Fruit name entered by the user
 
     Returns:

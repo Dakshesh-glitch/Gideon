@@ -7,7 +7,7 @@ FILE_PATH = os.path.abspath(os.path.dirname(__file__))
 @plugin("mips")
 class MipsConverter:
     """
-    Jarvis will convert any Assembly(mips) statement for you
+    Gideon will convert any Assembly(mips) statement for you
     from assembly to machine code or from machine code(hex)
     to Assembly.
 

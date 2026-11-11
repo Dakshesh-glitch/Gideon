@@ -4,17 +4,17 @@ from plugin import LINUX, UNIX, MACOS, WINDOWS, plugin, require
 
 @plugin('enable sound')
 def enable_sound(jarvis, s):
-    """Let Jarvis use his voice."""
+    """Let Gideon use his voice."""
     jarvis.speech = jarvis.enable_voice()
-    jarvis.say(Fore.BLUE + "Jarvis uses Googles speech engine.\nDo you consent with data "
-               + "collection when Jarvis talks out loud? If yes, type:" + Fore.RED + " gtts")
-    jarvis.say(Fore.BLUE + "If not, Jarvis will talk using the built-in speech engine. "
+    jarvis.say(Fore.BLUE + "Gideon uses Googles speech engine.\nDo you consent with data "
+               + "collection when Gideon talks out loud? If yes, type:" + Fore.RED + " gtts")
+    jarvis.say(Fore.BLUE + "If not, Gideon will talk using the built-in speech engine. "
                + " If you wish to disable GTTS, type: " + Fore.RED + "disable gtts")
 
 
 @plugin('disable sound')
 def disable_sound(jarvis, s):
-    """Deny Jarvis his voice."""
+    """Deny Gideon his voice."""
     jarvis.disable_voice()
 
 
@@ -55,22 +55,22 @@ def gtts(jarvis, s):
 @require(platform=[LINUX, WINDOWS])
 @plugin('talk faster')
 def talk_faster(jarvis, s):
-    """Make Jarvis' speech engine talk faster.
+    """Make Gideon's speech engine talk faster.
     """
     if jarvis.is_voice_enabled():
         jarvis.change_speech_rate(40)
     else:
-        jarvis.say("Type 'enable sound' to allow Jarvis to talk out loud.",
+        jarvis.say("Type 'enable sound' to allow Gideon to talk out loud.",
                    Fore.BLUE)
 
 
 @require(platform=[LINUX, WINDOWS])
 @plugin('talk slower')
 def talk_slower(jarvis, s):
-    """Make Jarvis' speech engine talk slower.
+    """Make Gideon's speech engine talk slower.
     """
     if jarvis.is_voice_enabled():
         jarvis.change_speech_rate(-40)
     else:
-        jarvis.say("Type 'enable sound' to allow Jarvis to talk out loud.",
+        jarvis.say("Type 'enable sound' to allow Gideon to talk out loud.",
                    Fore.BLUE)

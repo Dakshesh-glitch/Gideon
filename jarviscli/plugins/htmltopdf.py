@@ -15,7 +15,7 @@ class htmltopdf:
 @plugin("htmltopdf file")
 class htmltopdf_file:
     """
-    Transform your html file into a pdf file in the Jarvis source directory.
+    Transform your html file into a pdf file in the Gideon source directory.
     Type your url as the following:
     'htmltopdf example.html'
     The output file will be the following:
@@ -32,14 +32,14 @@ class htmltopdf_file:
             try:
                 pdfkit.from_file(s, s.replace('.html', '') + '.pdf')
             except OSError as err:
-                jarvis.say("OS error: {0}".format(err) + "\nMake sur your file is in the source directory of Jarvis and is an html file")
+                jarvis.say("OS error: {0}".format(err) + "\nMake sur your file is in the source directory of Gideon and is an html file")
 
 
 @require(platform=LINUX, native=["wkhtmltopdf"], network=True)
 @plugin("htmltopdf url")
 class htmltopdf_url:
     """
-    Transform your url page into a pdf file in the Jarvis source directory. type your url as the following:
+    Transform your url page into a pdf file in the Gideon source directory. type your url as the following:
     'htmltopdf google.com'
     The output file will be the following:
     'google.com.pdf'

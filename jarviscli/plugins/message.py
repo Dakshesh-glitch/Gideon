@@ -73,7 +73,7 @@ def send_join_message():
         return
 
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    data = {"chat_id": CHAT_ID, "text": "Jarvis is up and running!"}
+    data = {"chat_id": CHAT_ID, "text": "Gideon is up and running!"}
 
     try:
         requests.post(url, data=data)

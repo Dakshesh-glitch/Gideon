@@ -6,7 +6,7 @@ from plugin import plugin, require, LINUX
 @plugin('hotspot start')
 def hotspot_start(jarvis, string):
     """
-    Jarvis will set up your own hotspot.
+    Gideon will set up your own hotspot.
     """
     system("sudo ap-hotspot start")
 
@@ -15,6 +15,6 @@ def hotspot_start(jarvis, string):
 @plugin('hotspot stop')
 def hotspot_stop(jarvis, string):
     """
-    Jarvis will stop your hotspot.
+    Gideon will stop your hotspot.
     """
     system("sudo ap-hotspot stop")

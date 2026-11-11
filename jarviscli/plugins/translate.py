@@ -15,11 +15,11 @@ def translate(jarvis, s):
 
     Usage:
 
-    'Jarvis, please translate, from English to French, Hello, how are you?'
+    'Gideon, please translate, from English to French, Hello, how are you?'
 
     OR
 
-    'Jarvis, could you translate Hello, how are you? from English to French for me please?'
+    'Gideon, could you translate Hello, how are you? from English to French for me please?'
     """
 
     #   Check whether user has entered translate by itself or with extra parameters

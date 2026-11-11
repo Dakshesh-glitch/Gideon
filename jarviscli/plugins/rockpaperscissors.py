@@ -9,7 +9,7 @@ from plugin import plugin
 class rockpaperscissors():
     """
     rockpaperscissors Dcoumentation.
-    rockpaperscssors is the game Rock - Paper - Scissors that we all know with Jarvis as opponent.
+    rockpaperscssors is the game Rock - Paper - Scissors that we all know with Gideon as opponent.
 
     First of all you enter how many rounds you will play (max. 100).
     And then the game starts.
@@ -28,7 +28,7 @@ class rockpaperscissors():
 
     def __call__(self, jarvis, s):
         jarvis.say("!! Welcome to Rock Paper Scissors !!")
-        jarvis.say("!A game to play with Jarvis as rival!")
+        jarvis.say("!A game to play with Gideon as rival!")
 
         rounds = self.get_rounds("Enter how many rounds you will play (max. 100): ")
 
@@ -51,7 +51,7 @@ class rockpaperscissors():
                 break
 
             if (user_move == "score"):
-                txt = "You:" + str(user_score) + "  Jarvis:" + str(jarvis_score) + "  "
+                txt = "You:" + str(user_score) + "  Gideon:" + str(jarvis_score) + "  "
                 if (user_score > jarvis_score):
                     txt = txt + Back.GREEN + "You Winning" + Back.RESET
                 elif(user_score < jarvis_score):
@@ -67,7 +67,7 @@ class rockpaperscissors():
                 continue
 
             jarvis_move = self.get_jarvis()
-            jarvis.say("Jarvis move: " + jarvis_move)
+            jarvis.say("Gideon move: " + jarvis_move)
 
             g = self.game(user_move, jarvis_move)
 
@@ -77,7 +77,7 @@ class rockpaperscissors():
                 i = i + 1
             elif (g == "L"):
                 jarvis_score = jarvis_score + 1
-                jarvis.say("\t" + Back.RED + "Jarvis WIN" + Back.RESET)
+                jarvis.say("\t" + Back.RED + "Gideon WIN" + Back.RESET)
                 i = i + 1
             else:
                 jarvis.say("\t" + Back.MAGENTA + "TIE" + Back.RESET)

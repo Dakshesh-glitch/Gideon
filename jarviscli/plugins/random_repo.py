@@ -5,7 +5,7 @@ from random import randint
 from plugin import alias, plugin, require
 # This is the standard form of a plugin for jarvis
 
-# Anytime you make a change REMEMBER TO RESTART Jarvis
+# Anytime you make a change REMEMBER TO RESTART Gideon
 
 # You can run it through jarvis by the name
 # in the @plugin tag.
@@ -25,7 +25,7 @@ class RandomProjectPicker:
             jarvis.say("User Not Found!",Fore.RED)
         self.run(jarvis)
     def loginWithToken(self,jarvis):
-        auth_token = jarvis.input("Give Jarvis your Github Access Token: ",Fore.YELLOW)
+        auth_token = jarvis.input("Give Gideon your Github Access Token: ",Fore.YELLOW)
         try:
             g=login(token=auth_token)
             g.me()
@@ -36,7 +36,7 @@ class RandomProjectPicker:
             self.run(jarvis)
 
     def noLogin(self,jarvis):
-        username = jarvis.input("Give Jarvis your Github username: ",Fore.YELLOW)
+        username = jarvis.input("Give Gideon your Github username: ",Fore.YELLOW)
         g=GitHub()
         #try:
         repo_gen=g.repositories_by(username)

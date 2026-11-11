@@ -17,7 +17,7 @@ def get_option(jarvis):
     Presents options to the user and returns their choice.
 
     Args:
-        jarvis: The Jarvis assistant instance.
+        jarvis: The Gideon assistant instance.
 
     Returns:
         option (int or None): 1 for plain-to-cipher, 2 for cipher-to-plain,
@@ -73,7 +73,7 @@ def plain_to_cipher(jarvis):
     Converts plain text to Caesar cipher text with a shift of 3.
 
     Args:
-        jarvis: The Jarvis assistant instance.
+        jarvis: The Gideon assistant instance.
     """
     user_input = get_user_input(jarvis)
     converted = caesar_cipher(user_input, 3)
@@ -85,7 +85,7 @@ def cipher_to_plain(jarvis):
     Converts Caesar cipher text back to plain text with a shift of -3.
 
     Args:
-        jarvis: The Jarvis assistant instance.
+        jarvis: The Gideon assistant instance.
     """
     user_input = get_user_input(jarvis)
     converted = caesar_cipher(user_input, -3)
@@ -97,7 +97,7 @@ def get_user_input(jarvis):
     Prompts the user to enter a string for conversion.
 
     Args:
-        jarvis: The Jarvis assistant instance.
+        jarvis: The Gideon assistant instance.
 
     Returns:
         user_input (str): The string entered by the user.

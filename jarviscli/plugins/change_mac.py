@@ -9,7 +9,7 @@ from plugin import LINUX, plugin, require
 @plugin("mac")
 class MacManagerLinux():
     """
-    Jarvis plugin for viewing and changing any devices MAC
+    Gideon plugin for viewing and changing any devices MAC
     address connected to your computer
 
     """

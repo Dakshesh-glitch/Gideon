@@ -1,6 +1,6 @@
 """
 
-Jarvis plugin for keeping your own personal
+Gideon plugin for keeping your own personal
 events' agenda! Using this feature
 one can store in a csv file all the needed details for
 an event to remember.  More specifically, these details

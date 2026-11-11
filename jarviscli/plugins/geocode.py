@@ -13,7 +13,7 @@ class Geocoder:
     Attributes
     ----------
     jarvis : CmdInterpreter.JarvisAPI
-        An instance of Jarvis that will be used to interact with the user
+        An instance of Gideon that will be used to interact with the user
     input_addr : str
         A street address input by the user
     cleaned_addr : str
@@ -45,7 +45,7 @@ class Geocoder:
         Parameters
         ----------
         jarvis : CmdInterpreter.JarvisAPI
-            An instance of Jarvis that will be used to interact with the user
+            An instance of Gideon that will be used to interact with the user
         s : str
             The input string that was submitted when the plugin was launched.
             Likely to be empty.

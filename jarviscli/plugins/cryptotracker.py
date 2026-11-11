@@ -53,7 +53,7 @@ def check_prices(base, target):
     try:
         response = requests.get(
             url, headers={
-                'User-Agent': 'Jarvis'}, params=params).json()
+                'User-Agent': 'Gideon'}, params=params).json()
 
         price = response['askPrice']
         change = response['priceChangePercent']

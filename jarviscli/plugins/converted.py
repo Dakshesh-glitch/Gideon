@@ -73,7 +73,7 @@ def do_near(self, data):
 @require(network=True)
 @plugin("pinpoint")
 def do_pinpoint(self, s):
-    """Jarvis will pinpoint your location."""
+    """Gideon will pinpoint your location."""
     mapps.locate_me()
 
 

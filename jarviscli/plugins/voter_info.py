@@ -1,4 +1,4 @@
-"""Jarvis plugin to get public voter information based on the users address."""
+"""Gideon plugin to get public voter information based on the users address."""
 import json
 import geopy
 import urllib.parse
@@ -105,7 +105,7 @@ def get_voter_info(jarvis, s, address):
 @plugin("voterinfo")
 def voter_info(jarvis, s):
     """
-    Jarvis plugin that gets public voter information based on user's address.
+    Gideon plugin that gets public voter information based on user's address.
 
     Usage:
     voterinfo electionID
@@ -118,7 +118,7 @@ def voter_info(jarvis, s):
 
     """
     # Welome message
-    jarvis.say("Welcome to the Jarvis Voter Information plugin!", Fore.BLUE)
+    jarvis.say("Welcome to the Gideon Voter Information plugin!", Fore.BLUE)
 
     # Get user API key
     if not os.path.isfile(DATA_PATH + KEY_JSON_FILE):
@@ -150,7 +150,7 @@ def voter_info(jarvis, s):
     coordinates = (
         str(current_location["latitude"]) + ", " + str(current_location["longitude"])
     )
-    geo = geopy.geocoders.Nominatim(user_agent="Jarvis")
+    geo = geopy.geocoders.Nominatim(user_agent="Gideon")
     address = geo.reverse(coordinates)
 
     # Verify location with user
