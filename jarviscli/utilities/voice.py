@@ -119,7 +119,19 @@ class VoiceElevenLabs():
             data = b"".join(audio)
             playback.play(AudioSegment.from_file(io.BytesIO(data), format="mp3"))
         except Exception as e:
-            print("ElevenLabs error: {}".format(e))
+            status = getattr(e, "status_code", None)
+            body = getattr(e, "body", None)
+            detail = ""
+            if isinstance(body, dict):
+                d = body.get("detail", body)
+                detail = d.get("message", "") if isinstance(d, dict) else str(d)
+            if status == 401:
+                print("ElevenLabs error: invalid API key. Check ELEVENLABS_API_KEY, "
+                      "or type 'disable elevenlabs'.")
+            elif status:
+                print("ElevenLabs error {}: {}".format(status, detail or "request failed"))
+            else:
+                print("ElevenLabs error: {}".format(e))
 
 
 class VoiceMac():
