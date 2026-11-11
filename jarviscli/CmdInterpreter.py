@@ -144,7 +144,8 @@ class JarvisAPI(object):
         Use text to speech for every text passed to jarvis.say()
         """
         g = self.get_data('gtts_status')
-        self._jarvis.speech = create_voice(self, g, rate=120)
+        e = self.get_data('elevenlabs_status')
+        self._jarvis.speech = create_voice(self, g, rate=120, elevenlabs_status=e)
         self._jarvis.enable_voice = True
         self.update_data('enable_voice', True)
 
@@ -160,13 +161,31 @@ class JarvisAPI(object):
         """
         self.update_data('gtts_status', True)
         g = self.get_data('gtts_status')
-        self._jarvis.speech = create_voice(self, g, rate=120)
+        e = self.get_data('elevenlabs_status')
+        self._jarvis.speech = create_voice(self, g, rate=120, elevenlabs_status=e)
+
+    def disable_elevenlabs(self):
+        """
+        Stop using ElevenLabs for every text passed to jarvis.say()
+        """
+        self.update_data('elevenlabs_status', False)
+        g = self.get_data('gtts_status')
+        self._jarvis.speech = create_voice(self, g, rate=120, elevenlabs_status=False)
+
+    def enable_elevenlabs(self):
+        """
+        Use ElevenLabs text to speech for every text passed to jarvis.say()
+        """
+        self.update_data('elevenlabs_status', True)
+        g = self.get_data('gtts_status')
+        self._jarvis.speech = create_voice(self, g, rate=120, elevenlabs_status=True)
 
     def disable_voice(self):
         """
         Stop text to speech output & disable gtts for every text passed to jarvis.say()
         """
         self.disable_gtts()
+        self.disable_elevenlabs()
         self._jarvis.enable_voice = False
         self.update_data('enable_voice', False)
 
@@ -342,8 +361,10 @@ class CmdInterpreter(Cmd):
 
         try:
             gtts_status = self._api.get_data('gtts_status')
+            elevenlabs_status = self._api.get_data('elevenlabs_status')
             self.speech = create_voice(
-                self, gtts_status, rate=self.speech_rate)
+                self, gtts_status, rate=self.speech_rate,
+                elevenlabs_status=elevenlabs_status)
         except Exception as e:
             self.say("Voice not supported", Fore.MAGENTA)
             self.say(str(e), Fore.MAGENTA)

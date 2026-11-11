@@ -1,3 +1,4 @@
+import io
 import re
 from utilities.GeneralUtilities import IS_MACOS, IS_WIN
 import os
@@ -26,11 +27,18 @@ else:
     import pyttsx3
 
 
-def create_voice(self, gtts_status, rate=180):
+def create_voice(self, gtts_status, rate=180, elevenlabs_status=False):
     """
-    Checks that status of gtts engine, and calls the correct speech engine
+    Checks that status of the online engines, and calls the correct speech engine
     :param rate: Speech rate for the engine (if supported by the OS)
+    :param elevenlabs_status: use ElevenLabs (needs ELEVENLABS_API_KEY)
     """
+
+    if PYDUB_AVAILABLE and elevenlabs_status is True:
+        try:
+            return VoiceElevenLabs()
+        except Exception as e:
+            print("ElevenLabs voice unavailable ({}); using another engine.".format(e))
 
     if PYDUB_AVAILABLE and gtts_status is True:
         return VoiceGTTS()
@@ -76,6 +84,42 @@ class VoiceGTTS():
         audio = AudioSegment.from_mp3('voice.mp3')
         playback.play(audio)
         os.remove("voice.mp3")
+
+
+class VoiceElevenLabs():
+    """
+    Text to speech through the ElevenLabs API.
+    The API key is read from the ELEVENLABS_API_KEY environment variable.
+    Voice and model can be overridden with ELEVENLABS_VOICE_ID and
+    ELEVENLABS_MODEL_ID.
+    """
+    DEFAULT_VOICE_ID = "NOpBlnGInO9m6vDvFkFC"
+    DEFAULT_MODEL_ID = "eleven_v4"
+
+    def __init__(self):
+        api_key = os.getenv("ELEVENLABS_API_KEY")
+        if not api_key:
+            raise ValueError("ELEVENLABS_API_KEY is not set")
+        from elevenlabs.client import ElevenLabs
+        self.voice_id = os.getenv("ELEVENLABS_VOICE_ID", self.DEFAULT_VOICE_ID)
+        self.model_id = os.getenv("ELEVENLABS_MODEL_ID", self.DEFAULT_MODEL_ID)
+        self.elevenlabs = ElevenLabs(api_key=api_key)
+
+    def text_to_speech(self, speech):
+        speech = remove_ansi_escape_seq(speech)
+        if not speech or not speech.strip():
+            return
+        try:
+            audio = self.elevenlabs.text_to_speech.convert(
+                voice_id=self.voice_id,
+                text=speech,
+                model_id=self.model_id,
+                language_code="en",
+            )
+            data = b"".join(audio)
+            playback.play(AudioSegment.from_file(io.BytesIO(data), format="mp3"))
+        except Exception as e:
+            print("ElevenLabs error: {}".format(e))
 
 
 class VoiceMac():

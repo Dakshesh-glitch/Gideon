@@ -1,3 +1,5 @@
+import os
+
 from colorama import Fore
 from plugin import LINUX, UNIX, MACOS, WINDOWS, plugin, require
 
@@ -50,6 +52,26 @@ def gtts(jarvis, s):
 
     if not voice_state:
         jarvis.disable_voice()
+
+
+@plugin('elevenlabs')
+def elevenlabs(jarvis, s):
+    """Reads what is typed using ElevenLabs (needs ELEVENLABS_API_KEY)."""
+    if not os.getenv("ELEVENLABS_API_KEY"):
+        jarvis.say(Fore.BLUE + "Set the " + Fore.RED + "ELEVENLABS_API_KEY"
+                   + Fore.BLUE + " environment variable first, then restart Gideon.")
+        return
+    jarvis.say(Fore.BLUE + "Gideon will send spoken text to ElevenLabs. "
+               + "To stop, type:" + Fore.RED + " disable elevenlabs")
+    jarvis.enable_elevenlabs()
+    if not jarvis.is_voice_enabled():
+        jarvis.enable_voice()
+
+
+@plugin('disable elevenlabs')
+def disable_elevenlabs(jarvis, s):
+    """Stop using ElevenLabs for speech."""
+    jarvis.disable_elevenlabs()
 
 
 @require(platform=[LINUX, WINDOWS])
